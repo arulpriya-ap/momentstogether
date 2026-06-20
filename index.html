@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="home.css">
+
+    <title>MomentsTogether</title>
+</head>
+
+<body>
+  <header>
+  <!--Navigation Bar-->
+    <section class="m-5">
+     <div class="flex justify-between items-center">
+        <div class="max-w-xs flex-shrink-0 text-center ml-5">
+        <img src="../images/projectlogo.png" class="w-32 md:w-44 h-full transition-transform duration-300 hover:scale-110"> </div>
+        <div>
+        <div class="hidden md:flex flex-wrap justify-center gap-8 ">
+            <a href="../momentstogether/index.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">HOME</h1></a>
+            <a href="../virtualsurprises-deepika/virtual.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">VIRTUAL SURPRISES</h1></a>
+            <a href="../birthdaysurprises-arulpriya/birthday.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">BIRTHDAY SURPRISES</h1></a>
+            <a href="../anniversarysurprises-madhu/anniversary.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">ANNIVERSARY SURPRISES</h1></a>
+            <a href="../gifts-shameen/gifts.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">GIFTS</h1></a>
+            <a href="../relationshipsurprises-dhanush/relationship.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">RELATIONSHIP SURPRISES</h1></a>
+        </div>
+        <div class="mt-10 hidden md:flex justify-center">
+            <input type="text" placeholder="Search for surprises, gifts..." class= "w-1/2 border-2 border-[#272255] rounded-full px-5 py-2 shadow-md transition-all duration-300
+           focus:outline-none
+           focus:border-[#E4757B]
+           focus:shadow-xl">
+        </div>
+        </div>
+        <div class="flex-1 mx-4 md:hidden">
+            <input type="text" placeholder="Search for surprises, gifts..." class= "w-full border-2 border-[#272255] rounded-full px-5 py-2
+           shadow-md transition-all duration-300
+           focus:outline-none
+           focus:border-[#E4757B]
+           focus:shadow-xl">
+        </div>
+        <button id="menubar">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-18 md:hidden">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+
+        </button>
+      </div>  
+    </section>
+    <!--Side Nav Bar-->
+    <section id="sidenavbar" style="background-color: white; height: 100vh; right: 0%;" class="fixed top-0 z-20 transition-transform duration-1000 shadow-2xl w-[60%] md:w-[50%] lg:w-[30%] translate-x-full">
+        <div>
+            <div class="flex flex-col items-end pr-5">
+                <i id="closeicon" class="fa-solid fa-xmark text-2xl text-black p-5 inline cursor-pointer text-end"></i>
+            </div>
+            <div class="flex flex-col gap-10 items-start pl-10">
+            <a href="../momentstogether/index.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">HOME 🏠 </h1></a>
+            <a href="../virtualsurprises-deepika/virtual.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">VIRTUAL SURPRISES 🎉</h1></a>
+            <a href="../birthdaysurprises-arulpriya/birthday.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">BIRTHDAY SURPRISES 🎂</h1></a>
+            <a href="../anniversarysurprises-madhu/anniversary.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">ANNIVERSARY SURPRISES 👫</h1></a>
+            <a href="../gifts-shameen/gifts.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">GIFTS 🎁</h1></a>
+            <a href="../relationshipsurprises-dhanush/relationship.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">RELATIONSHIP SURPRISES 💌</h1></a>
+            </div>
+        </div>
+    </section>
+ 
+</header>
+<section class="relative">
+    <img id="heroImage"
+         src="../images/slide1.png"
+         class="w-full h-[500px] object-cover transition-opacity duration-1000">
+
+    <div class="absolute inset-0 flex flex-col justify-center items-center bg-black/40">
+        <h1 class="text-white text-5xl font-bold">
+            Make Every Moment Special
+        </h1>
+
+        <p class="text-white mt-4 text-xl">
+            Create unforgettable surprise experiences.
+        </p>
+    </div>
+</section>
+<section class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+
+        <h2 class="text-4xl font-bold text-center text-[#272255] mb-12">
+            Popular Surprise Categories
+        </h2>
+        <div class="grid md:grid-cols-4 gap-8">
+            <a href="../birthdaysurprises-arulpriya/birthday.html">
+            <div>
+                <button class="rounded-2xl overflow-hidden shadow-lg cursor-pointer hover:scale-105 transition">
+                <img src="../images/birthday.png" class="w-full h-56 object-cover">
+                <h3 class="text-center py-4 text-xl font-semibold">Birthday Surprises</h3>
+                </button>
+            </div>
+            </a>
+            <a href="../anniversarysurprises-madhu/anniversary.html">
+            <div >
+            <button class="rounded-2xl overflow-hidden shadow-lg cursor-pointer hover:scale-105 transition">
+                <img src="../images/anniversary.png" class="w-full h-56 object-cover">
+                <h3 class="text-center py-4 text-xl font-semibold">Anniversary Surprises</h3>
+            </button>
+            </div>
+            </a>
+            <a href="../virtualsurprises-deepika/virtual.html">
+            <div> 
+                <button class="rounded-2xl overflow-hidden shadow-lg cursor-pointer hover:scale-105 transition">
+                <img src="../images/virtual.png" class="w-full h-56 object-cover">
+                <h3 class="text-center py-4 text-xl font-semibold">Virtual Surprises</h3>
+                </button>
+            </div>
+            </a>
+            <a href="../relationshipsurprises-dhanush/relationship.html">
+            <div> 
+                <button class="rounded-2xl overflow-hidden shadow-lg cursor-pointer hover:scale-105 transition ">
+                <img src="../images/relationship.png" class="w-full h-56 object-cover">
+                <h3 class="text-center py-4 text-xl font-semibold">Relationship Surprises</h3>
+                </button>
+            </div>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="bg-gray-50 py-20">
+    <div class="max-w-6xl mx-auto px-6">
+
+        <h2 class="text-4xl font-bold text-center text-[#272255] mb-12">
+            Why Choose MomentsTogether?
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <div class="bg-white p-8 rounded-2xl shadow">
+                <h3 class="font-bold text-xl mb-4">Creative Ideas</h3>
+                <p>Unique surprise concepts crafted with care.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow">
+                <h3 class="font-bold text-xl mb-4">Easy Booking</h3>
+                <p>Simple and hassle-free planning process.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow">
+                <h3 class="font-bold text-xl mb-4">Memorable Moments</h3>
+                <p>Creating experiences that last forever.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto bg-[#e8f0fb] p-10 md:p-16">
+
+        <h2 class="text-center text-5xl font-semibold text-[#272255] mb-16">
+            Contact Us To Book A Surprise!
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-10">
+
+            <div>
+                <label class="block mb-2 text-xl">First Name*</label>
+                <input type="text"
+                    class="w-full border border-gray-300 p-3">
+            </div>
+
+            <div>
+                <label class="block mb-2 text-xl">Email Address*</label>
+                <input type="email"
+                    class="w-full border border-gray-300 p-3">
+            </div>
+
+            <div>
+                <label class="block mb-2 text-xl">Phone Number*</label>
+                <input type="text"
+                    class="w-full border border-gray-300 p-3">
+            </div>
+
+            <div>
+                <label class="block mb-2 text-xl">Location</label>
+                <select class="w-full border border-gray-300 p-3">
+                    <option>Please Select</option>
+                    <option>Chennai</option>
+                    <option>Bangalore</option>
+                    <option>Delhi</option>
+                </select>
+            </div>
+
+            <div class="md:col-span-2">
+                <label class="block mb-2 text-xl">Message</label>
+                <textarea rows="3"
+                    class="w-full border border-gray-300 p-3"></textarea>
+            </div>
+
+        </div>
+
+        <button class="w-full mt-12 bg-black text-white text-1xl font-semibold py-4 hover:bg-[#272255] transition">
+            Surprise Now!
+        </button>
+
+    </div>
+</section>
+  
+<footer>
+  <!--Footer-->
+    <section class="bg-gray-100 ">
+        <div class="mx-5 p-5 ">
+            <div class="grid grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr] gap-5">
+                <div class="max-w-xs text-[#272255]">
+                    <h1 class="tracking-wider">ABOUT</h1>
+                    <p class="mt-3 leading-loose">Our group consists of six members: Deepika, Madhu, Shameen, Roopesh, Dhanush, and Arulpriya. We are from the Error Makes Clever Full Stack Web Development (FSWD) Batch 28. As part of our course, we are developing a project named MomentsTogether, inspired by the Surprise Machi model project.</p>
+                </div>
+                <div class="flex flex-col gap-3 text-[#272255]">
+                    <h1 class="tracking-wider">QUICK LINKS</h1>
+                    <a href=""><p class="transition-all duration-300 hover:text-[#E4757B]">About Us</p></a>
+                    <a href=""><p class="transition-all duration-300 hover:text-[#E4757B]">Error Makes Cleaver</p></a>
+                    <a href=""><p class="transition-all duration-300 hover:text-[#E4757B]">Inspired Projecs</p></a>
+                    <a href=""><p class="transition-all duration-300 hover:text-[#E4757B]">Recent Projects By Our Team</p></a>
+                    <a href=""><p class="transition-all duration-300 hover:text-[#E4757B]">Terms & Conditions</p></a>
+                    <a href=""><p class="transition-all duration-300 hover:text-[#E4757B]">Privacy Policy</p></a>
+                </div>
+                <div class="flex flex-col text-[#272255]">
+                    <h1 class="mb-3 tracking-wider">CHENNAI</h1>
+                    <address class="leading-loose">
+                        No. 24, Rose Garden Street,
+
+                        Velachery, Chennai - 600042 
+
+                        Tamil Nadu, India
+                        
+                    </address>
+                </div>
+                <div class="flex flex-col text-[#272255]">
+                    <h1 class="mb-3 tracking-wider">BANGALORE</h1>
+                    <address class="leading-loose">
+                        No. 24, Rose Garden Street,
+
+                        Velachery, Bangalore - 600042 
+
+                        Tamil Nadu, India
+                    </address>
+                </div>
+                <div class="flex flex-col text-[#272255]">
+                    <h1 class="mb-3 tracking-wider">DELHI</h1>
+                    <address class="leading-loose">
+                        No. 24, Rose Garden Street,
+
+                        Velachery, Delhi - 600042 
+
+                        Tamil Nadu, India
+                    </address>
+                </div>
+            </div>
+
+            <div class=" mt-10 text-[#272255]">
+             <div class=" grid  sm:grid-cols-2 lg:grid-cols-3 items-start">
+                <div>
+                    <h1>Contact US</h1>
+                    📞 <a href="tel:+919876543210" class="hover:underline">+91 98765 43210</a>
+
+
+                    ✉️ <a href="mailto:contact@momentstogether.com" class="hover:underline">contact@momentstogether.com</a>
+                </div>
+                <div class="mt-5 sm:mt-0 flex flex-col">
+              <h1 class="tracking-wider">SIGN UP AND SAVE</h1>
+              <p class="mt-1 tracking-wide">Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+              <div class="flex items-center gap-3">
+              <input type="text" placeholder="Enter your Email-ID" class="mt-2 max-w-max border-2 border-[#272255] rounded-full px-5 py-2
+           shadow-md transition-all duration-300
+           focus:outline-none
+           focus:border-[#E4757B]
+           focus:shadow-xl"> 
+           <button title="Subscribe" class="">
+          <i class="fa-solid fa-square-arrow-up-right text-3xl cursor-pointer transition-all duration-300 hover:scale-110 text-white bg-[#272255] py-1 px-1 rounded-md"></i>
+          </button>
+          </div>
+    
+           </div>
+           </div>
+              <div class="flex flex-row  gap-10 mt-10 sm:mt-5 pb-10">
+              <i class="fa-brands fa-instagram text-4xl transition-transform duration-300 hover:-translate-y-2 hover:text-[#E4757B] cursor-pointer"></i>
+              <i class="fa-brands fa-facebook text-4xl transition-transform duration-300 hover:-translate-y-2 hover:text-[#E4757B] cursor-pointer"></i>
+              <i class="fa-brands fa-x-twitter text-4xl transition-transform duration-300 hover:-translate-y-2 hover:text-[#E4757B] cursor-pointer"></i>
+              <i class="fa-brands fa-youtube text-4xl transition-transform duration-300 hover:-translate-y-2 hover:text-[#E4757B] cursor-pointer"></i>
+              </div>
+            </div>
+        </div>
+    </section>
+</footer>
+<script src="home.js"></script>
+</body>
