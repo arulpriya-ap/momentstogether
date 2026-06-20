@@ -1,0 +1,16 @@
+* { font-family: 'Outfit', sans-serif; }
+
+/* Card hover */
+.product-card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.product-card:hover { transform: translateY(-5px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
+
+/* Filter active */
+.filter-btn.active { background: #272255; color: white; border-color: #272255; }
+.filter-btn:hover:not(.active) { border-color: #E4757B; color: #E4757B; }
+
+/* Sort select */
+select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath fill='%23666' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; padding-right: 28px; }
+
+/* No scrollbar for filter row */
+.no-scroll::-webkit-scrollbar { display: none; }
+.no-scroll { -ms-overflow-style: none; scrollbar-width: none; }
