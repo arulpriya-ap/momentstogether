@@ -1,0 +1,19 @@
+body{
+   font-family: 'Outfit',sans-serif;
+}
+
+@keyframes zoomOnLoad {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.zoom-on-load {
+    animation: zoomOnLoad 2s ease-in-out;
+}
