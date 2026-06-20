@@ -1,0 +1,9 @@
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #ffffff;
+}
+
+address {
+    font-style: normal;
+    white-space: pre-line;
+}
