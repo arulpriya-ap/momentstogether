@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anniversary Surprises — MomentsTogether</title>
+
+<!-- Tailwind CSS (used by the team header/sidenav) -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Font Awesome (used for the menu/close icons in the header) -->
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!--Google Font Link-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+
+<!-- Our own CSS file (loaded last so it can fine-tune anything Tailwind sets) -->
+<link rel="stylesheet" href="./anniversary.css">
+</head>
+<body>
+
+<!-- ============ SITE HEADER (shared across all MomentsTogether pages) ============ -->
+<header>
+  <!--Navigation Bar-->
+  <section class="m-5">
+    <div class="flex justify-between items-center">
+      <div class="max-w-xs flex-shrink-0 text-center ml-5">
+        <img src="./images/projectlogo.png" class="w-32 md:w-44 h-full transition-transform duration-300 hover:scale-110">
+      </div>
+      <div>
+        <div class="hidden md:flex flex-wrap justify-center gap-8 ">
+          <a href="../index.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">HOME</h1></a>
+          <a href="../virtual-deepika/virtual.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">VIRTUAL SURPRISES</h1></a>
+          <a href="../birthday-arulpriya/birthday.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">BIRTHDAY SURPRISES</h1></a>
+          <a href="./anniversary.html"><h1 class="tracking-wider text-[#E4757B] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">ANNIVERSARY SURPRISES</h1></a>
+          <a href="../gifts-shameem/gifts.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">GIFTS</h1></a>
+          <a href="../relationship-dhanush/relationship.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">RELATIONSHIP SURPRISES</h1></a>
+        </div>
+        <div class="mt-10 hidden md:flex justify-center">
+          <input type="text" placeholder="Search for surprises, gifts..." class="w-1/2 border-2 border-[#272255] rounded-full px-5 py-2 shadow-md transition-all duration-300
+           focus:outline-none
+           focus:border-[#E4757B]
+           focus:shadow-xl">
+        </div>
+      </div>
+      <div class="flex-1 mx-4 md:hidden">
+        <input type="text" placeholder="Search for surprises, gifts..." class="w-full border-2 border-[#272255] rounded-full px-5 py-2
+           shadow-md transition-all duration-300
+           focus:outline-none
+           focus:border-[#E4757B]
+           focus:shadow-xl">
+      </div>
+      <button id="menubar">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-18 md:hidden">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <!--Side Nav Bar-->
+  <section id="sidenavbar" style="background-color: white; height: 100vh; right: 0%;" class="fixed top-0 z-20 transition-transform duration-1000 shadow-2xl w-[60%] md:w-[50%] lg:w-[30%] translate-x-full">
+    <div>
+      <div class="flex flex-col items-end pr-5">
+        <i id="closeicon" class="fa-solid fa-xmark text-2xl text-black p-5 inline cursor-pointer text-end"></i>
+      </div>
+      <div class="flex flex-col gap-10 items-start pl-10">
+        <a  href="../index.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">HOME 🏠 </h1></a>
+        <a href="../virtual-deepika/virtual.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">VIRTUAL SURPRISES 🎉</h1></a>
+        <a href="../birthday-arulpriya/birthday.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">BIRTHDAY SURPRISES 🎂</h1></a>
+        <a href="./anniversary.html"><h1 class="tracking-wider text-[#E4757B] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">ANNIVERSARY SURPRISES 👫</h1></a>
+        <a href="../gifts-shameem/gifts.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">GIFTS 🎁</h1></a>
+        <a href="../relationship-dhanush/relationship.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">RELATIONSHIP SURPRISES 💌</h1></a>
+      </div>
+    </div>
+  </section>
+</header>
+
+<!--
+  ===========================================================
+  HOW TO ADD YOUR OWN PICTURES (read this first!)
+  ===========================================================
+  1. Create a new folder called "images" right next to this
+     index.html file.
+  2. Drop your photos inside it using these exact file names:
+       - banner.jpg       (the big photo at the top of the page)
+       - product-1.jpg  to  product-8.jpg  (one photo per surprise)
+  3. That's it! The <img> tags already point to these file
+     names, so your photos will show up automatically.
+     If a photo file is missing, the page just hides that image
+     box instead of showing a broken image icon.
+  ===========================================================
+  NOTE: The header above is the shared MomentsTogether header.
+  Add "projectlogo.png" to your images folder too, and update
+  the "../folder-name/page.html" links if your teammates'
+  folder names are different from what's shown here.
+  ===========================================================
+-->
+
+<!-- ============ BANNER ============ -->
+<section class="banner">
+  <img src="./images/banner.jpg" alt="Anniversary Surprises" onerror="this.style.display='none'">
+  <div class="banner-text">
+    <h1>Anniversary Surprises</h1>
+    <p>Handcrafted surprises planned, set up and cleared by our team.</p>
+  </div>
+</section>
+
+<!-- ============ BREADCRUMB ============ -->
+<div class="breadcrumb">
+  <div class="wrap">
+    <a href="#">Home</a> / <span>Anniversary Surprises</span>
+  </div>
+</div>
+
+<!-- ============ TOOLBAR (filters button + count + cart + sort) ============ -->
+<div class="toolbar">
+  <div class="wrap toolbar-inner">
+    <button id="filterBtn" class="filter-btn">Filters</button>
+    <p class="count-text"><span id="resultCount">8</span> surprises found</p>
+
+    <div class="toolbar-right">
+      <select id="sortSelect">
+        <option value="featured">Sort: Featured</option>
+        <option value="low">Price: Low to High</option>
+        <option value="high">Price: High to Low</option>
+      </select>
+
+      <!-- This button shows/hides the cart sidebar -->
+      <button id="cartBtn" class="cart-btn">
+        🛒 Cart <span id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MAIN LAYOUT: SIDEBAR + PRODUCTS ============ -->
+<div class="wrap layout">
+
+  <!-- ===== FILTER SIDEBAR ===== -->
+  <aside class="sidebar" id="sidebar">
+    <h3>Filter by Relationship</h3>
+
+    <!-- Each checkbox has a "value" — our JavaScript reads this value
+         to know which checkboxes are ticked. -->
+    <label class="checkbox-row">
+      <input type="checkbox" class="filterCheckbox" value="husband"> Husband
+    </label>
+    <label class="checkbox-row">
+      <input type="checkbox" class="filterCheckbox" value="wife"> Wife
+    </label>
+    <label class="checkbox-row">
+      <input type="checkbox" class="filterCheckbox" value="boyfriend"> Boyfriend
+    </label>
+    <label class="checkbox-row">
+      <input type="checkbox" class="filterCheckbox" value="girlfriend"> Girlfriend
+    </label>
+    <label class="checkbox-row">
+      <input type="checkbox" class="filterCheckbox" value="bestfriend"> Best Friend
+    </label>
+
+    <button id="clearBtn" class="clear-btn">Clear Filters</button>
+  </aside>
+
+  <!-- ===== PRODUCT GRID ===== -->
+  <!-- This stays empty in the HTML — JavaScript fills it in
+       with product cards built from the data in script.js -->
+  <main class="product-grid" id="productGrid"></main>
+
+</div>
+
+<!-- ============ CART SIDEBAR ============ -->
+<div class="overlay" id="cartOverlay"></div>
+<aside class="cart-sidebar" id="cartSidebar">
+  <div class="cart-head">
+    <h3>Your Cart</h3>
+    <button id="closeCartBtn">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <p class="empty-msg">Your cart is empty.</p>
+  </div>
+  <div class="cart-foot">
+    <p>Total: <strong id="cartTotal">₹0</strong></p>
+    <a href="https://wa.me/919876543210" target="_blank" class="checkout-btn">Checkout on WhatsApp</a>
+  </div>
+</aside>
+
+<!-- ============ CONTACT US SECTION (shared design across MomentsTogether pages) ============ -->
+<section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto bg-[#e8f0fb] p-10 md:p-16">
+
+        <h2 class="text-center text-5xl font-semibold text-[#272255] mb-16">
+            Contact Us To Book A Surprise!
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-10">
+
+            <div>
+                <label class="block mb-2 text-xl">First Name*</label>
+                <input type="text"
+                    class="w-full border border-gray-300 p-3">
+            </div>
+
+            <div>
+                <label class="block mb-2 text-xl">Email Address*</label>
+                <input type="email"
+                    class="w-full border border-gray-300 p-3">
+            </div>
+
+            <div>
+                <label class="block mb-2 text-xl">Phone Number*</label>
+                <input type="text"
+                    class="w-full border border-gray-300 p-3">
+            </div>
+
+            <div>
+                <label class="block mb-2 text-xl">Location</label>
+                <select class="w-full border border-gray-300 p-3">
+                    <option>Please Select</option>
+                    <option>Chennai</option>
+                    <option>Bangalore</option>
+                    <option>Delhi</option>
+                </select>
+            </div>
+
+            <div class="md:col-span-2">
+                <label class="block mb-2 text-xl">Message</label>
+                <textarea rows="3"
+                    class="w-full border border-gray-300 p-3"></textarea>
+            </div>
+
+        </div>
+
+        <button class="w-full mt-12 bg-black text-white text-1xl font-semibold py-4 hover:bg-[#272255] transition">
+            Surprise Now!
+        </button>
+
+    </div>
+</section>
+
+<!-- ============ SITE FOOTER (shared across all MomentsTogether pages) ============ -->
+<footer>
+  <!--Footer-->
+    <section class="bg-gray-100 ">
+        <div class="mx-5 p-5 ">
+            <div class="grid grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr] gap-5">
+                <div class="max-w-xs text-[#272255]">
+                    <h1 class="tracking-wider">ABOUT</h1>
+                    <p class="mt-3 leading-loose">Our group consists of six members: Deepika, Madhu, Shameen, Roopesh, Dhanush, and Arulpriya. We are from the Error Makes Clever Full Stack Web Development (FSWD) Batch 28. As part of our course, we are developing a project named MomentsTogether, inspired by the Surprise Machi model project.</p>
+                </div>
+                <div class="flex flex-col gap-3 text-[#272255]">
+                    <h1 class="tracking-wider">QUICK LINKS</h1>
+                    <a href=""><p class="transition-all duration-300 hover:text-[#E4757B]">About Us</p></a>
+                    <a href=""><p class="transition-all duration-300 hover:text-[#E4757B]">Error Makes Cleaver</p></a>
+                    <a href=""><p class="transition-all duration-300 hover:text-[#E4757B]">Inspired Projecs</p></a>
+                    <a href=""><p class="transition-all duration-300 hover:text-[#E4757B]">Recent Projects By Our Team</p></a>
+                    <a href=""><p class="transition-all duration-300 hover:text-[#E4757B]">Terms &amp; Conditions</p></a>
+                    <a href=""><p class="transition-all duration-300 hover:text-[#E4757B]">Privacy Policy</p></a>
+                </div>
+                <div class="flex flex-col text-[#272255]">
+                    <h1 class="mb-3 tracking-wider">CHENNAI</h1>
+                    <address class="leading-loose">
+                        No. 24, Rose Garden Street,
+                        Velachery, Chennai - 600042
+                        Tamil Nadu, India
+                    </address>
+                </div>
+                <div class="flex flex-col text-[#272255]">
+                    <h1 class="mb-3 tracking-wider">BANGALORE</h1>
+                    <address class="leading-loose">
+                        No. 24, Rose Garden Street,
+                        Velachery, Bangalore - 600042
+                        Tamil Nadu, India
+                    </address>
+                </div>
+                <div class="flex flex-col text-[#272255]">
+                    <h1 class="mb-3 tracking-wider">DELHI</h1>
+                    <address class="leading-loose">
+                        No. 24, Rose Garden Street,
+                        Velachery, Delhi - 600042
+                        Tamil Nadu, India
+                    </address>
+                </div>
+            </div>
+
+            <div class=" mt-10 text-[#272255]">
+             <div class=" grid  sm:grid-cols-2 lg:grid-cols-3 items-start">
+                <div>
+                    <h1>Contact US</h1>
+                    📞 <a href="tel:+919876543210" class="hover:underline">+91 98765 43210</a>
+                    ✉️ <a href="mailto:contact@momentstogether.com" class="hover:underline">contact@momentstogether.com</a>
+                </div>
+                <div class="mt-5 sm:mt-0 flex flex-col">
+              <h1 class="tracking-wider">SIGN UP AND SAVE</h1>
+              <p class="mt-1 tracking-wide">Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+              <div class="flex items-center gap-3">
+              <input type="text" placeholder="Enter your Email-ID" class="mt-2 max-w-max border-2 border-[#272255] rounded-full px-5 py-2
+           shadow-md transition-all duration-300
+           focus:outline-none
+           focus:border-[#E4757B]
+           focus:shadow-xl">
+           <button title="Subscribe" class="">
+          <i class="fa-solid fa-square-arrow-up-right text-3xl cursor-pointer transition-all duration-300 hover:scale-110 text-white bg-[#272255] py-1 px-1 rounded-md"></i>
+          </button>
+          </div>
+
+           </div>
+           </div>
+              <div class="flex flex-row  gap-10 mt-10 sm:mt-5 pb-10">
+              <i class="fa-brands fa-instagram text-4xl transition-transform duration-300 hover:-translate-y-2 hover:text-[#E4757B] cursor-pointer"></i>
+              <i class="fa-brands fa-facebook text-4xl transition-transform duration-300 hover:-translate-y-2 hover:text-[#E4757B] cursor-pointer"></i>
+              <i class="fa-brands fa-x-twitter text-4xl transition-transform duration-300 hover:-translate-y-2 hover:text-[#E4757B] cursor-pointer"></i>
+              <i class="fa-brands fa-youtube text-4xl transition-transform duration-300 hover:-translate-y-2 hover:text-[#E4757B] cursor-pointer"></i>
+              </div>
+            </div>
+        </div>
+    </section>
+</footer>
+
+<!-- Our own JavaScript file (loaded last, so the HTML above already exists) -->
+<script src="anniversary.js"></script>
+</body>
+</html>
