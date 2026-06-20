@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relationship Surprises – Moments Together</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-white" style="font-family:'Outfit',sans-serif; color:#272255;">
+
+<!--Side Nav Bar-->
+<section id="sidenavbar" style="background-color: white; height: 100vh; right: 0%;" class="fixed top-0 z-20 transition-transform duration-1000 shadow-2xl w-[60%] md:w-[50%] lg:w-[30%] translate-x-full">
+    <div>
+        <div class="flex flex-col items-end pr-5">
+            <i id="closeicon" class="fa-solid fa-xmark text-2xl text-black p-5 inline cursor-pointer text-end"></i>
+        </div>
+        <div class="flex flex-col gap-10 items-start pl-10">
+        <a href="../home-roopesh/index.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">HOME 🏠 </h1></a>
+        <a href="../virtualsurprises-deepika/virtual.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">VIRTUAL SURPRISES 🎉</h1></a>
+        <a href="../birthdaysurprises-arulpriya/birthday.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">BIRTHDAY SURPRISES 🎂</h1></a>
+        <a href="../anniversarysurprises-madhu/anniversary.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">ANNIVERSARY SURPRISES 👫</h1></a>
+        <a href="../gifts-shameen/gifts.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">GIFTS 🎁</h1></a>
+        <a href="../relationshipsurprises-dhanush/relationship.html"><h1 class="tracking-wider text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">RELATIONSHIP SURPRISES 💌</h1></a>
+        </div>
+    </div>
+</section>
+
+<!--Navigation Bar-->
+<section class="m-5">
+  <div class="flex justify-between items-center">
+    <div class="max-w-xs flex-shrink-0 text-center ml-5">
+      <img src="./images/projectlogo.png" class="w-32 md:w-44 h-full transition-transform duration-300 hover:scale-110">
+    </div>
+    <div>
+      <div class="hidden md:flex flex-wrap justify-center gap-8">
+        <a href=""><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">HOME</h1></a>
+        <a href=""><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">VIRTUAL SURPRISES</h1></a>
+        <a href=""><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">BIRTHDAY SURPRISES</h1></a>
+        <a href=""><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">ANNIVERSARY SURPRISES</h1></a>
+        <a href=""><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">GIFTS</h1></a>
+        <a href=""><h1 class="tracking-wider text-[#E4757B] border-b-2 border-[#E4757B] pb-0.5">RELATIONSHIP SURPRISES</h1></a>
+      </div>
+      <div class="mt-10 hidden md:flex justify-center">
+        <input type="text" placeholder="Search for surprises, gifts..." class="w-1/2 border-2 border-[#272255] rounded-full px-5 py-2 shadow-md transition-all duration-300 focus:outline-none focus:border-[#E4757B] focus:shadow-xl">
+      </div>
+    </div>
+    <div class="flex-1 mx-4 md:hidden">
+      <input type="text" placeholder="Search for surprises, gifts..." class="w-full border-2 border-[#272255] rounded-full px-5 py-2 shadow-md transition-all duration-300 focus:outline-none focus:border-[#E4757B] focus:shadow-xl">
+    </div>
+    <button id="hamburger">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-18 md:hidden">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+    </button>
+  </div>
+</section>
+
+<!-- ========== PAGE TITLE ========== -->
+<section class="bg-gray-50 py-8 px-6 border-b border-gray-200">
+  <div class="max-w-7xl mx-auto">
+    <nav class="text-xs text-gray-400 mb-2">
+      <a href="#" class="hover:text-[#E4757B]">Home</a>
+      <span class="mx-1">›</span>
+      <span class="text-[#272255] font-medium">Relationship Surprises</span>
+    </nav>
+    <h1 class="text-3xl font-bold text-[#272255]">Surprises by Relationship</h1>
+    <p class="text-gray-500 text-sm mt-1">Find the perfect surprise for every special person in your life.</p>
+  </div>
+</section>
+
+<!-- ========== FILTER BAR ========== -->
+<section class="bg-white border-b border-gray-200 py-4 px-6 sticky top-0 z-10">
+  <div class="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+    <div class="flex items-center gap-2 overflow-x-auto no-scroll pb-1 flex-nowrap">
+      <span class="text-xs text-gray-400 font-medium whitespace-nowrap">Filter:</span>
+      <button class="filter-btn active whitespace-nowrap px-4 py-1.5 rounded-full text-sm border border-gray-300 font-medium transition-all" data-rel="all">All</button>
+      <button class="filter-btn whitespace-nowrap px-4 py-1.5 rounded-full text-sm border border-gray-300 text-gray-600 font-medium transition-all" data-rel="husband">Husband</button>
+      <button class="filter-btn whitespace-nowrap px-4 py-1.5 rounded-full text-sm border border-gray-300 text-gray-600 font-medium transition-all" data-rel="wife">Wife</button>
+      <button class="filter-btn whitespace-nowrap px-4 py-1.5 rounded-full text-sm border border-gray-300 text-gray-600 font-medium transition-all" data-rel="boyfriend">Boyfriend</button>
+      <button class="filter-btn whitespace-nowrap px-4 py-1.5 rounded-full text-sm border border-gray-300 text-gray-600 font-medium transition-all" data-rel="girlfriend">Girlfriend</button>
+      <button class="filter-btn whitespace-nowrap px-4 py-1.5 rounded-full text-sm border border-gray-300 text-gray-600 font-medium transition-all" data-rel="fiance">Fiancé/Fiancée</button>
+      <button class="filter-btn whitespace-nowrap px-4 py-1.5 rounded-full text-sm border border-gray-300 text-gray-600 font-medium transition-all" data-rel="bestfriend">Best Friend</button>
+    </div>
+    <select id="sort-filter" onchange="applyFilters()"
+      class="text-sm border border-gray-300 rounded-full px-4 py-1.5 text-gray-600 bg-white cursor-pointer focus:outline-none min-w-max">
+      <option value="featured">Sort: Featured</option>
+      <option value="price-asc">Price: Low to High</option>
+      <option value="price-desc">Price: High to Low</option>
+    </select>
+  </div>
+</section>
+
+<!-- ========== PRODUCTS ========== -->
+<main class="max-w-7xl mx-auto px-6 py-10">
+  <p class="text-sm text-gray-500 mb-6">
+    Showing <span id="result-count" class="font-semibold text-[#272255]">12</span> results
+  </p>
+
+  <div id="grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+    <!-- Card 1 -->
+    <div class="product-card bg-white border border-gray-200 rounded-2xl overflow-hidden" data-rel="husband boyfriend" data-price="3499">
+      <div class="relative">
+        <div class="h-52 overflow-hidden">
+         <img src="./images/Rose Petal Decoration Ideas Bedroom.jpg" alt="Rose Decoration" class="w-full h-full object-cover">
+      </div>
+        <span class="absolute top-3 left-3 bg-[#E4757B] text-white text-xs font-semibold px-3 py-1 rounded-full">Popular</span>
+      </div>
+      <div class="p-4">
+        <p class="text-xs text-gray-400 mb-1">For Husband · Boyfriend</p>
+        <h3 class="font-semibold text-[#272255] text-sm mb-3 leading-snug">Romantic Rose Petal Room Decoration</h3>
+        <div class="flex items-center justify-between">
+          <span class="text-base font-bold text-[#272255]">₹3,499</span>
+          <button class="text-xs font-semibold text-white px-4 py-1.5 rounded-full transition-opacity hover:opacity-80" style="background:#272255">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="product-card bg-white border border-gray-200 rounded-2xl overflow-hidden" data-rel="wife girlfriend" data-price="2999">
+      <div class="h-52 overflow-hidden">
+        <img src="./images/Floral Fantasy Surprise with Candles.jpg" alt="Floral Fantasy" class="w-full h-full object-cover">
+      </div>
+      <div class="p-4">
+        <p class="text-xs text-gray-400 mb-1">For Wife · Girlfriend</p>
+        <h3 class="font-semibold text-[#272255] text-sm mb-3 leading-snug">Floral Fantasy Surprise with Candles</h3>
+        <div class="flex items-center justify-between">
+          <span class="text-base font-bold text-[#272255]">₹2,999</span>
+          <button class="text-xs font-semibold text-white px-4 py-1.5 rounded-full hover:opacity-80" style="background:#272255">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="product-card bg-white border border-gray-200 rounded-2xl overflow-hidden" data-rel="fiance" data-price="5999">
+      <div class="relative">
+        <div class="h-52 overflow-hidden">
+          <img src="./images/Dream Proposal Setup with Fairy Lights.jpg" alt="Proposal Setup" class="w-full h-full object-cover">
+        </div>
+        <span class="absolute top-3 left-3 bg-[#E4757B] text-white text-xs font-semibold px-3 py-1 rounded-full">Popular</span>
+      </div>
+      <div class="p-4">
+        <p class="text-xs text-gray-400 mb-1">For Fiancé / Fiancée</p>
+        <h3 class="font-semibold text-[#272255] text-sm mb-3 leading-snug">Dream Proposal Setup with Fairy Lights</h3>
+        <div class="flex items-center justify-between">
+          <span class="text-base font-bold text-[#272255]">₹5,999</span>
+          <button class="text-xs font-semibold text-white px-4 py-1.5 rounded-full hover:opacity-80" style="background:#272255">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="product-card bg-white border border-gray-200 rounded-2xl overflow-hidden" data-rel="bestfriend" data-price="1499">
+      <div class="relative">
+        <div class="h-52 overflow-hidden">
+          <img src="./images/Friendship Surprise Hamper & Message Board.jpg" alt="Friendship Hamper" class="w-full h-full object-cover">
+        </div>
+        <span class="absolute top-3 left-3 bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Budget</span>
+      </div>
+      <div class="p-4">
+        <p class="text-xs text-gray-400 mb-1">For Best Friend</p>
+        <h3 class="font-semibold text-[#272255] text-sm mb-3 leading-snug">Friendship Surprise Hamper & Message Board</h3>
+        <div class="flex items-center justify-between">
+          <span class="text-base font-bold text-[#272255]">₹1,499</span>
+          <button class="text-xs font-semibold text-white px-4 py-1.5 rounded-full hover:opacity-80" style="background:#272255">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="product-card bg-white border border-gray-200 rounded-2xl overflow-hidden" data-rel="girlfriend wife" data-price="4499">
+      <div class="relative">
+        <div class="h-52 overflow-hidden">
+          <img src="./images/Midnight Birthday Surprise with Cake & Balloons.jpg" alt="Birthday Surprise" class="w-full h-full object-cover">
+        </div>
+        <span class="absolute top-3 left-3 bg-[#E4757B] text-white text-xs font-semibold px-3 py-1 rounded-full">Popular</span>
+      </div>
+      <div class="p-4">
+        <p class="text-xs text-gray-400 mb-1">For Girlfriend · Wife</p>
+        <h3 class="font-semibold text-[#272255] text-sm mb-3 leading-snug">Midnight Birthday Surprise with Cake & Balloons</h3>
+        <div class="flex items-center justify-between">
+          <span class="text-base font-bold text-[#272255]">₹4,499</span>
+          <button class="text-xs font-semibold text-white px-4 py-1.5 rounded-full hover:opacity-80" style="background:#272255">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="product-card bg-white border border-gray-200 rounded-2xl overflow-hidden" data-rel="husband" data-price="6499">
+      <div class="relative">
+        <div class="h-52 overflow-hidden">
+          <img src="./images/Luxury Candlelight Dinner at Home Setup.jpg" alt="Candlelight Dinner" class="w-full h-full object-cover">
+        </div>
+        <span class="absolute top-3 left-3 text-white text-xs font-semibold px-3 py-1 rounded-full" style="background:#272255">Premium</span>
+      </div>
+      <div class="p-4">
+        <p class="text-xs text-gray-400 mb-1">For Husband</p>
+        <h3 class="font-semibold text-[#272255] text-sm mb-3 leading-snug">Luxury Candlelight Dinner at Home Setup</h3>
+        <div class="flex items-center justify-between">
+          <span class="text-base font-bold text-[#272255]">₹6,499</span>
+          <button class="text-xs font-semibold text-white px-4 py-1.5 rounded-full hover:opacity-80" style="background:#272255">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="product-card bg-white border border-gray-200 rounded-2xl overflow-hidden" data-rel="boyfriend girlfriend" data-price="3299">
+      <div class="relative">
+        <div class="h-52 overflow-hidden">
+          <img src="./images/Private Movie Night Outdoor Cinema Setup.jpg" alt="Movie Night" class="w-full h-full object-cover">
+        </div>
+        <span class="absolute top-3 left-3 bg-[#E4757B] text-white text-xs font-semibold px-3 py-1 rounded-full">Popular</span>
+      </div>
+      <div class="p-4">
+        <p class="text-xs text-gray-400 mb-1">For Boyfriend · Girlfriend</p>
+        <h3 class="font-semibold text-[#272255] text-sm mb-3 leading-snug">Private Movie Night Outdoor Cinema Setup</h3>
+        <div class="flex items-center justify-between">
+          <span class="text-base font-bold text-[#272255]">₹3,299</span>
+          <button class="text-xs font-semibold text-white px-4 py-1.5 rounded-full hover:opacity-80" style="background:#272255">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="product-card bg-white border border-gray-200 rounded-2xl overflow-hidden" data-rel="fiance wife" data-price="7999">
+      <div class="relative">
+        <div class="h-52 overflow-hidden">
+          <img src="./images/Starry Night Rooftop Romantic Setup.jpg" alt="Rooftop Romantic Setup" class="w-full h-full object-cover">
+        </div>
+        <span class="absolute top-3 left-3 bg-[#E4757B] text-white text-xs font-semibold px-3 py-1 rounded-full">Bestseller</span>
+      </div>
+      <div class="p-4">
+        <p class="text-xs text-gray-400 mb-1">For Fiancée · Wife</p>
+        <h3 class="font-semibold text-[#272255] text-sm mb-3 leading-snug">Starry Night Rooftop Romantic Setup</h3>
+        <div class="flex items-center justify-between">
+          <span class="text-base font-bold text-[#272255]">₹7,999</span>
+          <button class="text-xs font-semibold text-white px-4 py-1.5 rounded-full hover:opacity-80" style="background:#272255">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="product-card bg-white border border-gray-200 rounded-2xl overflow-hidden" data-rel="bestfriend girlfriend" data-price="999">
+      <div class="relative">
+        <div class="h-52 overflow-hidden">
+          <img src="./images/DIY Surprise Gift Box with Personal Touch.jpg" alt="DIY Gift Box" class="w-full h-full object-cover">
+        </div>
+        <span class="absolute top-3 left-3 bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Budget</span>
+      </div>
+      <div class="p-4">
+        <p class="text-xs text-gray-400 mb-1">For Best Friend · Girlfriend</p>
+        <h3 class="font-semibold text-[#272255] text-sm mb-3 leading-snug">DIY Surprise Gift Box with Personal Touch</h3>
+        <div class="flex items-center justify-between">
+          <span class="text-base font-bold text-[#272255]">₹999</span>
+          <button class="text-xs font-semibold text-white px-4 py-1.5 rounded-full hover:opacity-80" style="background:#272255">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 10 -->
+    <div class="product-card bg-white border border-gray-200 rounded-2xl overflow-hidden" data-rel="husband wife" data-price="4999">
+      <div class="h-52 overflow-hidden">
+        <img src="./images/Anniversary Candle Light Surprise at Home.jpg" alt="Anniversary Setup" class="w-full h-full object-cover">
+      </div>
+      <div class="p-4">
+        <p class="text-xs text-gray-400 mb-1">For Husband · Wife</p>
+        <h3 class="font-semibold text-[#272255] text-sm mb-3 leading-snug">Anniversary Candle Light Surprise at Home</h3>
+        <div class="flex items-center justify-between">
+          <span class="text-base font-bold text-[#272255]">₹4,999</span>
+          <button class="text-xs font-semibold text-white px-4 py-1.5 rounded-full hover:opacity-80" style="background:#272255">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 11 -->
+    <div class="product-card bg-white border border-gray-200 rounded-2xl overflow-hidden" data-rel="boyfriend" data-price="1999">
+      <div class="h-52 overflow-hidden">
+        <img src="./images/Surprise Music & Memory Scrapbook Night.jpg" alt="Music Scrapbook" class="w-full h-full object-cover">
+      </div>
+      <div class="p-4">
+        <p class="text-xs text-gray-400 mb-1">For Boyfriend</p>
+        <h3 class="font-semibold text-[#272255] text-sm mb-3 leading-snug">Surprise Music & Memory Scrapbook Night</h3>
+        <div class="flex items-center justify-between">
+          <span class="text-base font-bold text-[#272255]">₹1,999</span>
+          <button class="text-xs font-semibold text-white px-4 py-1.5 rounded-full hover:opacity-80" style="background:#272255">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 12 -->
+    <div class="product-card bg-white border border-gray-200 rounded-2xl overflow-hidden" data-rel="fiance bestfriend" data-price="2499">
+      <div class="h-52 overflow-hidden">
+        <img src="./images/Balloon Decoration Surprise with Photo Wall.jpg" alt="Balloon Decoration" class="w-full h-full object-cover">
+      </div>
+      <div class="p-4">
+        <p class="text-xs text-gray-400 mb-1">For Fiancé · Best Friend</p>
+        <h3 class="font-semibold text-[#272255] text-sm mb-3 leading-snug">Balloon Decoration Surprise with Photo Wall</h3>
+        <div class="flex items-center justify-between">
+          <span class="text-base font-bold text-[#272255]">₹2,499</span>
+          <button class="text-xs font-semibold text-white px-4 py-1.5 rounded-full hover:opacity-80" style="background:#272255">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- No results -->
+  <div id="no-results" class="hidden text-center py-20">
+    <p class="text-4xl mb-3">😔</p>
+    <h3 class="text-lg font-semibold text-[#272255] mb-1">No surprises found</h3>
+    <p class="text-gray-400 text-sm mb-4">Try a different filter.</p>
+    <button onclick="resetFilters()" class="text-sm font-semibold text-white px-6 py-2 rounded-full" style="background:#272255">Show All</button>
+  </div>
+
+</main>
+
+<!--Footer-->
+<section class="bg-gray-100">
+    <div class="mx-5 p-5">
+        <div class="grid grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr] gap-5">
+            <div class="max-w-xs text-[#272255]">
+                <h1 class="tracking-wider">ABOUT</h1>
+                <p class="mt-3 leading-loose">Our group consists of six members: Deepika, Madhu, Shameen, Roopesh, Dhanush, and Arulpriya. We are from the Error Makes Clever Full Stack Web Development (FSWD) Batch 28. As part of our course, we are developing a project named MomentsTogether, inspired by the Surprise Machi model project.</p>
+            </div>
+            <div class="flex flex-col gap-3 text-[#272255]">
+                <h1 class="tracking-wider">QUICK LINKS</h1>
+                <a href=""><p class="transition-all duration-300 hover:text-[#E4757B]">About Us</p></a>
+                <a href=""><p class="transition-all duration-300 hover:text-[#E4757B]">Error Makes Cleaver</p></a>
+                <a href=""><p class="transition-all duration-300 hover:text-[#E4757B]">Inspired Projecs</p></a>
+                <a href=""><p class="transition-all duration-300 hover:text-[#E4757B]">Recent Projects By Our Team</p></a>
+                <a href=""><p class="transition-all duration-300 hover:text-[#E4757B]">Terms & Conditions</p></a>
+                <a href=""><p class="transition-all duration-300 hover:text-[#E4757B]">Privacy Policy</p></a>
+            </div>
+            <div class="flex flex-col text-[#272255]">
+                <h1 class="mb-3 tracking-wider">CHENNAI</h1>
+                <address class="leading-loose">
+                    No. 24, Rose Garden Street,<br>
+                    Velachery, Chennai - 600042<br>
+                    Tamil Nadu, India
+                </address>
+            </div>
+            <div class="flex flex-col text-[#272255]">
+                <h1 class="mb-3 tracking-wider">BANGALORE</h1>
+                <address class="leading-loose">
+                    No. 24, Rose Garden Street,<br>
+                    Velachery, Bangalore - 600042<br>
+                    Tamil Nadu, India
+                </address>
+            </div>
+            <div class="flex flex-col text-[#272255]">
+                <h1 class="mb-3 tracking-wider">DELHI</h1>
+                <address class="leading-loose">
+                    No. 24, Rose Garden Street,<br>
+                    Velachery, Delhi - 600042<br>
+                    Tamil Nadu, India
+                </address>
+            </div>
+        </div>
+
+        <div class="mt-10 text-[#272255]">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 items-start">
+                <div>
+                    <h1>Contact US</h1>
+                    📞 <a href="tel:+919876543210" class="hover:underline">+91 98765 43210</a><br>
+                    ✉️ <a href="mailto:contact@momentstogether.com" class="hover:underline">contact@momentstogether.com</a>
+                </div>
+                <div class="mt-5 sm:mt-0 flex flex-col">
+                    <h1 class="tracking-wider">SIGN UP AND SAVE</h1>
+                    <p class="mt-1 tracking-wide">Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+                    <div class="flex items-center gap-3">
+                        <input type="text" placeholder="Enter your Email-ID" class="mt-2 max-w-max border-2 border-[#272255] rounded-full px-5 py-2 shadow-md transition-all duration-300 focus:outline-none focus:border-[#E4757B] focus:shadow-xl">
+                        <button title="Subscribe" class="">
+                            <i class="fa-solid fa-square-arrow-up-right text-3xl cursor-pointer transition-all duration-300 hover:scale-110 text-white bg-[#272255] py-1 px-1 rounded-md"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-row gap-10 mt-10 sm:mt-5 pb-10">
+                <i class="fa-brands fa-instagram text-4xl transition-transform duration-300 hover:-translate-y-2 hover:text-[#E4757B] cursor-pointer"></i>
+                <i class="fa-brands fa-facebook text-4xl transition-transform duration-300 hover:-translate-y-2 hover:text-[#E4757B] cursor-pointer"></i>
+                <i class="fa-brands fa-x-twitter text-4xl transition-transform duration-300 hover:-translate-y-2 hover:text-[#E4757B] cursor-pointer"></i>
+                <i class="fa-brands fa-youtube text-4xl transition-transform duration-300 hover:-translate-y-2 hover:text-[#E4757B] cursor-pointer"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
