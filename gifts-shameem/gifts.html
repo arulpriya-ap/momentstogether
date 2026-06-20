@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Surprice Machii</title>
+    <link rel="stylesheet" href="gifts.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!--Navigation Bar-->
+    <section class="m-5">
+      <div class="flex justify-between items-center">
+        <div class="max-w-xs flex-shrink-0 text-center ml-5">
+          <img
+            src="./img/projectlogo.png"
+            class="w-32 md:w-44 h-full transition-transform duration-300 hover:scale-110"
+          />
+        </div>
+        <div>
+          <div class="hidden md:flex flex-wrap justify-center gap-8">
+            <a href="../index.html"
+              ><h1
+                class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300"
+              >
+                HOME
+              </h1></a
+            >
+            <a href="../virtual-deepika/virtual.html"
+              ><h1
+                class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300"
+              >
+                VIRTUAL SURPRISES
+              </h1></a
+            >
+            <a href="../birthday-arulpriya/birthday.html"
+              ><h1
+                class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300"
+              >
+                BIRTHDAY SURPRISES
+              </h1></a
+            >
+            <a href="../anniversary-madhu/anniversary.html"
+              ><h1
+                class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300"
+              >
+                ANNIVERSARY SURPRISES
+              </h1></a
+            >
+            <a href="./gifts.html"
+              ><h1
+                class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300"
+              >
+                GIFTS
+              </h1></a
+            >
+            <a href="../relationship-dhanush/relationship.html"
+              ><h1
+                class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300"
+              >
+                RELATIONSHIP SURPRISES
+              </h1></a
+            >
+          </div>
+          <div class="mt-10 hidden md:flex justify-center">
+            <input
+              type="text"
+              placeholder="Search for surprises, gifts..."
+              class="w-1/2 border-2 border-[#272255] rounded-full px-5 py-2 shadow-md transition-all duration-300 focus:outline-none focus:border-[#E4757B] focus:shadow-xl"
+            />
+          </div>
+        </div>
+        <div class="flex-1 mx-4 md:hidden">
+          <input
+            type="text"
+            placeholder="Search for surprises, gifts..."
+            class="w-full border-2 border-[#272255] rounded-full px-5 py-2 shadow-md transition-all duration-300 focus:outline-none focus:border-[#E4757B] focus:shadow-xl"
+          />
+        </div>
+        <button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-8 h-18 md:hidden"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ══ HERO SECTION ══ -->
+    <section class="hero">
+      <div class="hero-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="#">Home</a> /
+        </nav>
+        <h1 class="hero-title">Surprise Presents</h1>
+      </div>
+    </section>
+
+    <div class="page-wrap">
+      <!-- ══ SIDEBAR ══ -->
+      <aside>
+        <div class="sidebar-block" id="priceBlock">
+          <div class="sidebar-title" onclick="toggleBlock('priceBlock')">
+            PRICE <span class="chev"></span>
+          </div>
+          <div class="sidebar-body">
+            <div class="price-values">
+              <span id="priceMinLabel">₹ 0</span>
+              <span id="priceMaxLabel">₹ 4,999</span>
+            </div>
+            <div class="range-wrap">
+              <div class="range-track"></div>
+              <div class="range-fill" id="rangeFill"></div>
+              <input
+                type="range"
+                id="minRange"
+                min="0"
+                max="4999"
+                value="0"
+                step="1"
+                oninput="updateRange()"
+              />
+              <input
+                type="range"
+                id="maxRange"
+                min="0"
+                max="4999"
+                value="4999"
+                step="1"
+                oninput="updateRange()"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-block" id="catBlock">
+          <div class="sidebar-title" onclick="toggleBlock('catBlock')">
+            CATEGORY <span class="chev"></span>
+          </div>
+          <div class="sidebar-body">
+            <ul class="cat-list" id="catList">
+              <li>
+                <label
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 9px;
+                    width: 100%;
+                    cursor: pointer;
+                  "
+                >
+                  <input
+                    type="checkbox"
+                    data-cat="all"
+                    onchange="filterByCategory(this)"
+                  />
+                  All <span class="cat-count">(7)</span>
+                </label>
+              </li>
+              <li>
+                <label
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 9px;
+                    width: 100%;
+                    cursor: pointer;
+                  "
+                >
+                  <input
+                    type="checkbox"
+                    data-cat="book-lovers"
+                    onchange="filterByCategory(this)"
+                  />
+                  Book Lovers <span class="cat-count">(1)</span>
+                </label>
+              </li>
+              <li>
+                <label
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 9px;
+                    width: 100%;
+                    cursor: pointer;
+                  "
+                >
+                  <input
+                    type="checkbox"
+                    data-cat="hampers"
+                    onchange="filterByCategory(this)"
+                  />
+                  Hampers <span class="cat-count">(1)</span>
+                </label>
+              </li>
+              <li>
+                <label
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 9px;
+                    width: 100%;
+                    cursor: pointer;
+                  "
+                >
+                  <input
+                    type="checkbox"
+                    data-cat="long-distance"
+                    onchange="filterByCategory(this)"
+                  />
+                  Long Distance <span class="cat-count">(1)</span>
+                </label>
+              </li>
+              <li>
+                <label
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 9px;
+                    width: 100%;
+                    cursor: pointer;
+                  "
+                >
+                  <input
+                    type="checkbox"
+                    data-cat="relationship-based"
+                    onchange="filterByCategory(this)"
+                  />
+                  Relationship Based <span class="cat-count">(1)</span>
+                </label>
+              </li>
+              <li>
+                <label
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 9px;
+                    width: 100%;
+                    cursor: pointer;
+                  "
+                >
+                  <input
+                    type="checkbox"
+                    data-cat="romantic"
+                    onchange="filterByCategory(this)"
+                  />
+                  Romantic <span class="cat-count">(1)</span>
+                </label>
+              </li>
+              <li>
+                <label
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 9px;
+                    width: 100%;
+                    cursor: pointer;
+                  "
+                >
+                  <input
+                    type="checkbox"
+                    data-cat="romantic-gifts"
+                    onchange="filterByCategory(this)"
+                  />
+                  Romantic gifts <span class="cat-count">(1)</span>
+                </label>
+              </li>
+              <li>
+                <label
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 9px;
+                    width: 100%;
+                    cursor: pointer;
+                  "
+                >
+                  <input
+                    type="checkbox"
+                    data-cat="travel"
+                    onchange="filterByCategory(this)"
+                  />
+                  Travel <span class="cat-count">(1)</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ══ MAIN ══ -->
+      <main class="main-col">
+        <div class="toolbar">
+          <p class="product-count" id="productCount">16 products</p>
+          <select
+            class="sort-select"
+            id="sortSelect"
+            onchange="renderProducts()"
+          >
+            <option value="best-selling">Best selling</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+            <option value="az">Alphabetically, A–Z</option>
+            <option value="za">Alphabetically, Z–A</option>
+          </select>
+        </div>
+
+        <div class="products-grid" id="productsGrid"></div>
+      </main>
+    </div>
+
+    <!--Footer-->
+    <section class="bg-gray-100 p-5">
+      <div class="mx-5 p-5">
+        <div
+          class="grid grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr] gap-5"
+        >
+          <div class="max-w-xs text-[#272255]">
+            <h1 class="tracking-wider">ABOUT</h1>
+            <p class="mt-3 leading-loose">
+              Our group consists of six members: Deepika, Madhu, Shameen,
+              Roopesh, Dhanush, and Arulpriya. We are from the Error Makes
+              Clever Full Stack Web Development (FSWD) Batch 28. As part of our
+              course, we are developing a project named MomentsTogether,
+              inspired by the Surprise Machi model project.
+            </p>
+          </div>
+          <div class="flex flex-col gap-3 text-[#272255]">
+            <h1 class="tracking-wider">QUICK LINKS</h1>
+            <a href=""
+              ><p class="transition-all duration-300 hover:text-[#E4757B]">
+                About Us
+              </p></a
+            >
+            <a href=""
+              ><p class="transition-all duration-300 hover:text-[#E4757B]">
+                Error Makes Cleaver
+              </p></a
+            >
+            <a href=""
+              ><p class="transition-all duration-300 hover:text-[#E4757B]">
+                Inspired Projecs
+              </p></a
+            >
+            <a href=""
+              ><p class="transition-all duration-300 hover:text-[#E4757B]">
+                Recent Projects By Our Team
+              </p></a
+            >
+            <a href=""
+              ><p class="transition-all duration-300 hover:text-[#E4757B]">
+                Terms & Conditions
+              </p></a
+            >
+            <a href=""
+              ><p class="transition-all duration-300 hover:text-[#E4757B]">
+                Privacy Policy
+              </p></a
+            >
+          </div>
+          <div class="flex flex-col text-[#272255]">
+            <h1 class="mb-3 tracking-wider">CHENNAI</h1>
+            <address class="leading-loose">
+              No. 24, Rose Garden Street, Velachery, Chennai - 600042 Tamil
+              Nadu, India
+            </address>
+          </div>
+          <div class="flex flex-col text-[#272255]">
+            <h1 class="mb-3 tracking-wider">BANGALORE</h1>
+            <address class="leading-loose">
+              No. 24, Rose Garden Street, Velachery, Bangalore - 600042 Tamil
+              Nadu, India
+            </address>
+          </div>
+          <div class="flex flex-col text-[#272255]">
+            <h1 class="mb-3 tracking-wider">DELHI</h1>
+            <address class="leading-loose">
+              No. 24, Rose Garden Street, Velachery, Delhi - 600042 Tamil Nadu,
+              India
+            </address>
+          </div>
+        </div>
+
+        <div class="mt-10 text-[#272255]">
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 items-start">
+            <div>
+              <h1>Contact US</h1>
+              📞
+              <a href="tel:+919876543210" class="hover:underline"
+                >+91 98765 43210</a
+              >
+
+              ✉️
+              <a
+                href="mailto:contact@momentstogether.com"
+                class="hover:underline"
+                >contact@momentstogether.com</a
+              >
+            </div>
+            <div class="mt-5 sm:mt-0 flex flex-col">
+              <h1 class="tracking-wider">SIGN UP AND SAVE</h1>
+              <p class="mt-1 tracking-wide">
+                Subscribe to get special offers, free giveaways, and
+                once-in-a-lifetime deals.
+              </p>
+              <div class="flex items-center gap-3">
+                <input
+                  type="text"
+                  placeholder="Enter your Email-ID"
+                  class="mt-2 max-w-max border-2 border-[#272255] rounded-full px-5 py-2 shadow-md transition-all duration-300 focus:outline-none focus:border-[#E4757B] focus:shadow-xl"
+                />
+                <button title="Subscribe" class="">
+                  <i
+                    class="fa-solid fa-square-arrow-up-right text-3xl cursor-pointer transition-all duration-300 hover:scale-110 text-white bg-[#272255] py-1 px-1 rounded-md"
+                  ></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-row gap-10 mt-10 sm:mt-5 pb-10">
+            <i
+              class="fa-brands fa-instagram text-4xl transition-transform duration-300 hover:-translate-y-2 hover:text-[#E4757B] cursor-pointer"
+            ></i>
+            <i
+              class="fa-brands fa-facebook text-4xl transition-transform duration-300 hover:-translate-y-2 hover:text-[#E4757B] cursor-pointer"
+            ></i>
+            <i
+              class="fa-brands fa-x-twitter text-4xl transition-transform duration-300 hover:-translate-y-2 hover:text-[#E4757B] cursor-pointer"
+            ></i>
+            <i
+              class="fa-brands fa-youtube text-4xl transition-transform duration-300 hover:-translate-y-2 hover:text-[#E4757B] cursor-pointer"
+            ></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--javascript-->
+    <script src="gifts.js"></script>
+  </body>
+</html>
