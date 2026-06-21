@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Surprises</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="virtual.css">
+</head>
+<body>
+
+<Header>
+<!--Navigation Bar-->
+    <section class="m-5">
+     <div class="flex justify-between items-center">
+        <div class="max-w-xs flex-shrink-0 text-center ml-5">
+         <a href="../index.html"><img src="./images/projectlogo.png" class="w-32 md:w-44 h-full transition-transform duration-300 hover:scale-110 cursor-pointer"></a>
+        </div>
+        <div>
+        <div class="hidden md:flex flex-wrap justify-center gap-8 ">
+            <a href="../index.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">HOME</h1></a>
+            <a href="./virtual.html"><h1 class="tracking-wider text-[#E4757B] -translate-y-1 transition-all duration-300">VIRTUAL SURPRISES</h1></a>
+            <a href="../birthday-arulpriya/birthday.html" class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">BIRTHDAY SURPRISES</h1></a>
+            <a href="../anniversary-madhu/anniversary.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">ANNIVERSARY SURPRISES</h1></a>
+            <a href="../gifts-shameem/gifts.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">GIFTS</h1></a>
+            <a href="../relationship-dhanush/relationship.html"><h1 class="tracking-wider text-[#272255] hover:text-[#E4757B] hover:-translate-y-1 hover:transition-all duration-300">RELATIONSHIP SURPRISES</h1></a>
+        </div>
+        <div class="mt-10 hidden md:flex justify-center">
+            <input type="text" placeholder="Search for surprises, gifts..." class= "w-1/2 border-2 border-[#272255] rounded-full px-5 py-2 shadow-md transition-all duration-300
+           focus:outline-none
+           focus:border-[#E4757B]
+           focus:shadow-xl">
+        </div>
+        </div>
+        <div class="flex-1 mx-4 md:hidden">
+            <input type="text" placeholder="Search for surprises, gifts..." class= "w-full border-2 border-[#272255] rounded-full px-5 py-2
+           shadow-md transition-all duration-300
+           focus:outline-none
+           focus:border-[#E4757B]
+           focus:shadow-xl">
+        </div>
+        <button onclick="openMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-18 md:hidden">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </button>
+      </div>  
+    </section>
+ </Header>
+
+<!--Banner-->
+<section class="m-5">
+    <div class="rounded-3xl overflow-hidden bg-[#272255] p-10">
+        <div class="grid md:grid-cols-2 items-center gap-5">
+            <div class="text-white">
+                <h1 class="text-4xl md:text-5xl tracking-wider">Virtual Surprises 🎉</h1>
+                <p class="mt-5 leading-loose">Send love and smiles to your dear ones from anywhere in the world. Make their day special with our virtual surprises.</p>
+                <button class="mt-5 bg-white text-[#272255] px-6 py-2 rounded-full hover:bg-[#E4757B] hover:text-white transition-all duration-300">Explore Now</button>
+            </div>
+            <div class="flex justify-center">
+                <img src="./images/suprise1.jpg" alt ="video_suprise" class="rounded-2xl w-full max-w-md">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Filter-->
+<section class="m-5">
+    <div class="bg-gray-100 rounded-2xl p-5">
+        <h1 class="tracking-wider text-[#272255] mb-4">FILTER</h1>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <select id="category" class="border-2 border-[#272255] rounded-full px-5 py-2 text-[#272255] focus:outline-none focus:border-[#E4757B]">
+                <option value="all">All Categories</option>
+                <option value="video">Video Message</option>
+                <option value="party">Virtual Party</option>
+                <option value="song">Song Dedication</option>
+                <option value="celebrity">Celebrity Wish</option>
+                <option value="game">Virtual Game</option>
+            </select>
+            <select id="occasion" class="border-2 border-[#272255] rounded-full px-5 py-2 text-[#272255] focus:outline-none focus:border-[#E4757B]">
+                <option value="all">All Occasions</option>
+                <option value="birthday">Birthday</option>
+                <option value="anniversary">Anniversary</option>
+                <option value="proposal">Proposal</option>
+                <option value="congrats">Congratulations</option>
+            </select>
+            <select id="price" class="border-2 border-[#272255] rounded-full px-5 py-2 text-[#272255] focus:outline-none focus:border-[#E4757B]">
+                <option value="all">All Prices</option>
+                <option value="low">Below ₹500</option>
+                <option value="mid">₹500 - ₹1500</option>
+                <option value="high">Above ₹1500</option>
+            </select>
+            <button onclick="filterCards()" class="bg-[#272255] text-white rounded-full px-5 py-2 hover:bg-[#E4757B] transition-all duration-300">Apply</button>
+        </div>
+    </div>
+</section>
+
+<!--Cards-->
+<section class="m-5">
+    <h1 class="tracking-wider text-2xl text-center text-[#272255] mb-8">OUR VIRTUAL SURPRISES</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="card bg-white rounded-2xl shadow-md overflow-hidden hover:-translate-y-2 transition-all duration-300" data-category="video" data-occasion="birthday" data-price="450">
+            <img src="./images/suprise2.jpg" alt="virtual_suprise" class="w-full h-56 object-cover">
+            <div class="p-5">
+                <h2 class="tracking-wider text-[#272255]">Personalized Video Message</h2>
+                <p class="mt-2 leading-loose text-sm text-[#272255]">A heartfelt custom video to make their birthday special.</p>
+                <div class="flex justify-between items-center mt-4">
+                    <span class="text-[#E4757B] text-xl">₹450</span>
+                    <button class="bg-[#272255] text-white px-4 py-1 rounded-full hover:bg-[#E4757B] transition-all duration-300">Book Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card bg-white rounded-2xl shadow-md overflow-hidden hover:-translate-y-2 transition-all duration-300" data-category="party" data-occasion="anniversary" data-price="1800">
+            <img src="./images/suprise3.jpg" alt="song_suprise" class="w-full h-56 object-cover">
+            <div class="p-5">
+                <h2 class="tracking-wider text-[#272255]">Virtual Anniversary Party</h2>
+                <p class="mt-2 leading-loose text-sm text-[#272255]">Online celebration with games, music and memories.</p>
+                <div class="flex justify-between items-center mt-4">
+                    <span class="text-[#E4757B] text-xl">₹1800</span>
+                    <button class="bg-[#272255] text-white px-4 py-1 rounded-full hover:bg-[#E4757B] transition-all duration-300">Book Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card bg-white rounded-2xl shadow-md overflow-hidden hover:-translate-y-2 transition-all duration-300" data-category="song" data-occasion="proposal" data-price="1200">
+            <img src="./images/suprise4.jpg" alt="celebrity_suprise" class="w-full h-56 object-cover">
+            <div class="p-5">
+                <h2 class="tracking-wider text-[#272255]">Custom Song Dedication</h2>
+                <p class="mt-2 leading-loose text-sm text-[#272255]">A romantic song made and dedicated for your loved one.</p>
+                <div class="flex justify-between items-center mt-4">
+                    <span class="text-[#E4757B] text-xl">₹1200</span>
+                    <button class="bg-[#272255] text-white px-4 py-1 rounded-full hover:bg-[#E4757B] transition-all duration-300">Book Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card bg-white rounded-2xl shadow-md overflow-hidden hover:-translate-y-2 transition-all duration-300" data-category="celebrity" data-occasion="birthday" data-price="2500">
+            <img src="./images/suprise5.jpg" alt="virtual1_suprise" class="w-full h-56 object-cover">
+            <div class="p-5">
+                <h2 class="tracking-wider text-[#272255]">Celebrity Birthday Wish</h2>
+                <p class="mt-2 leading-loose text-sm text-[#272255]">Personalized birthday wish from their favorite celebrity.</p>
+                <div class="flex justify-between items-center mt-4">
+                    <span class="text-[#E4757B] text-xl">₹2500</span>
+                    <button class="bg-[#272255] text-white px-4 py-1 rounded-full hover:bg-[#E4757B] transition-all duration-300">Book Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card bg-white rounded-2xl shadow-md overflow-hidden hover:-translate-y-2 transition-all duration-300" data-category="game" data-occasion="congrats" data-price="650">
+            <img src="./images/suprise6.jpg" alt="prop_suprise" class="w-full h-56 object-cover">
+            <div class="p-5">
+                <h2 class="tracking-wider text-[#272255]">Virtual Game Night</h2>
+                <p class="mt-2 leading-loose text-sm text-[#272255]">Celebrate online with fun games and live hosts.</p>
+                <div class="flex justify-between items-center mt-4">
+                    <span class="text-[#E4757B] text-xl">₹650</span>
+                    <button class="bg-[#272255] text-white px-4 py-1 rounded-full hover:bg-[#E4757B] transition-all duration-300">Book Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card bg-white rounded-2xl shadow-md overflow-hidden hover:-translate-y-2 transition-all duration-300" data-category="video" data-occasion="proposal" data-price="350">
+            <img src="./images/suprise7.jpg" class="w-full h-56 object-cover">
+            <div class="p-5">
+                <h2 class="tracking-wider text-[#272255]">Surprise Proposal Video</h2>
+                <p class="mt-2 leading-loose text-sm text-[#272255]">Cinematic proposal video to make your moment special.</p>
+                <div class="flex justify-between items-center mt-4">
+                    <span class="text-[#E4757B] text-xl">₹350</span>
+                    <button class="bg-[#272255] text-white px-4 py-1 rounded-full hover:bg-[#E4757B] transition-all duration-300">Book Now</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <p id="empty" class="hidden text-center text-[#E4757B] mt-8">No surprises found. Try another filter.</p>
+</section>
+
+<!--How it works-->
+<section class="m-5 mt-16">
+    <h1 class="tracking-wider text-2xl text-center text-[#272255] mb-8">HOW IT WORKS</h1>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="text-center p-5">
+            <div class="text-4xl mb-2">🎯</div>
+            <h2 class="tracking-wider text-[#272255]">Choose</h2>
+            <p class="mt-2 leading-loose text-sm text-[#272255]">Pick the virtual surprise you want.</p>
+        </div>
+        <div class="text-center p-5">
+            <div class="text-4xl mb-2">📝</div>
+            <h2 class="tracking-wider text-[#272255]">Customize</h2>
+            <p class="mt-2 leading-loose text-sm text-[#272255]">Share details to make it personal.</p>
+        </div>
+        <div class="text-center p-5">
+            <div class="text-4xl mb-2">💳</div>
+            <h2 class="tracking-wider text-[#272255]">Book</h2>
+            <p class="mt-2 leading-loose text-sm text-[#272255]">Confirm booking with payment.</p>
+        </div>
+        <div class="text-center p-5">
+            <div class="text-4xl mb-2">🎉</div>
+            <h2 class="tracking-wider text-[#272255]">Surprise!</h2>
+            <p class="mt-2 leading-loose text-sm text-[#272255]">We deliver at the perfect moment.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <section class="bg-gray-100 ">
+        <div class="mx-5 p-5 ">
+            <div class="grid grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr] gap-5">
+                <div class="max-w-xs text-[#272255]">
+                    <h1 class="tracking-wider">ABOUT</h1>
+                    <p class="mt-3 leading-loose">Our group consists of six members: Deepika, Madhu, Shameen, Roopesh, Dhanush, and Arulpriya. We are from the Error Makes Clever Full Stack Web Development (FSWD) Batch 28. As part of our course, we are developing a project named MomentsTogether, inspired by the Surprise Machi model project.</p>
+                </div>
+                <div class="flex flex-col gap-3 text-[#272255]">
+                    <h1 class="tracking-wider">QUICK LINKS</h1>
+                    <a href=""><p class="transition-all duration-300 hover:text-[#E4757B]">About Us</p></a>
+                    <a href=""><p class="transition-all duration-300 hover:text-[#E4757B]">Error Makes Cleaver</p></a>
+                    <a href=""><p class="transition-all duration-300 hover:text-[#E4757B]">Inspired Projecs</p></a>
+                    <a href=""><p class="transition-all duration-300 hover:text-[#E4757B]">Recent Projects By Our Team</p></a>
+                    <a href=""><p class="transition-all duration-300 hover:text-[#E4757B]">Terms & Conditions</p></a>
+                    <a href=""><p class="transition-all duration-300 hover:text-[#E4757B]">Privacy Policy</p></a>
+                </div>
+                <div class="flex flex-col text-[#272255]">
+                    <h1 class="mb-3 tracking-wider">CHENNAI</h1>
+                    <address class="leading-loose">
+                        No. 24, Rose Garden Street,
+                        Velachery, Chennai - 600042 
+                        Tamil Nadu, India
+                    </address>
+                </div>
+                <div class="flex flex-col text-[#272255]">
+                    <h1 class="mb-3 tracking-wider">BANGALORE</h1>
+                    <address class="leading-loose">
+                        No. 24, Rose Garden Street,
+                        Velachery, Bangalore - 600042 
+                        Tamil Nadu, India
+                    </address>
+                </div>
+                <div class="flex flex-col text-[#272255]">
+                    <h1 class="mb-3 tracking-wider">DELHI</h1>
+                    <address class="leading-loose">
+                        No. 24, Rose Garden Street,
+                        Velachery, Delhi - 600042 
+                        Tamil Nadu, India
+                    </address>
+                </div>
+            </div>
+
+            <div class=" mt-10 text-[#272255]">
+             <div class=" grid  sm:grid-cols-2 lg:grid-cols-3 items-start">
+                <div>
+                    <h1>Contact US</h1>
+                    📞 <a href="tel:+919876543210" class="hover:underline">+91 98765 43210</a>
+                    ✉️ <a href="mailto:contact@momentstogether.com" class="hover:underline">contact@momentstogether.com</a>
+                </div>
+                <div class="mt-5 sm:mt-0 flex flex-col">
+              <h1 class="tracking-wider">SIGN UP AND SAVE</h1>
+              <p class="mt-1 tracking-wide">Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+              <div class="flex items-center gap-3">
+              <input type="text" placeholder="Enter your Email-ID" class="mt-2 max-w-max border-2 border-[#272255] rounded-full px-5 py-2
+           shadow-md transition-all duration-300
+           focus:outline-none
+           focus:border-[#E4757B]
+           focus:shadow-xl"> 
+           <button title="Subscribe" class="">
+          <i class="fa-solid fa-square-arrow-up-right text-3xl cursor-pointer transition-all duration-300 hover:scale-110 text-white bg-[#272255] py-1 px-1 rounded-md"></i>
+          </button>
+          </div>
+           </div>
+           </div>
+              <div class="flex flex-row  gap-10 mt-10 sm:mt-5 pb-10">
+              <i class="fa-brands fa-instagram text-4xl transition-transform duration-300 hover:-translate-y-2 hover:text-[#E4757B] cursor-pointer"></i>
+              <i class="fa-brands fa-facebook text-4xl transition-transform duration-300 hover:-translate-y-2 hover:text-[#E4757B] cursor-pointer"></i>
+              <i class="fa-brands fa-x-twitter text-4xl transition-transform duration-300 hover:-translate-y-2 hover:text-[#E4757B] cursor-pointer"></i>
+              <i class="fa-brands fa-youtube text-4xl transition-transform duration-300 hover:-translate-y-2 hover:text-[#E4757B] cursor-pointer"></i>
+              </div>
+            </div>
+        </div>
+    </section>
+</footer>
+
+<script src="virtual.js"></script>
+</body>
+</html>
